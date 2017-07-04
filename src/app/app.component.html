@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <filters></filters>
+  <tabs (tabChanged)="onTabChanged($event)">
+  	<tab title="Tab A">
+  		<comp1></comp1>
+  	</tab>
+  	<tab title="Tab B">
+  		<comp2></comp2>
+  	</tab>
+  </tabs>
+</div>

@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewEncapsulation } from "@angular/core";
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector:'app-root',
+  encapsulation:ViewEncapsulation.Native,
+  templateUrl:'./app.component.html',
+  styles:[
+    `
+      h1.foo{
+        color:orange;
+      }
+    `
+  ]
 })
+
 export class AppComponent {
-  title = 'app works!';
+  private title = "Hi, this app is running :)";
+  
+  onTabChanged(tabTitle:string){
+    console.info( "On Changed", tabTitle );
+  }
+
 }
